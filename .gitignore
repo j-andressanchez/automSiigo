@@ -1,9 +1,2 @@
 Frontend/node_modules/
 Frontend/*.lock
-
-Backend/target/
-Backend/*.log
-Backend/*.xml.bak
-Backend/.mvn/
-Backend/mvnw
-Backend/mvnw.cmd
