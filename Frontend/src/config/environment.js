@@ -3,7 +3,7 @@ const environments = {
     baseUrl: 'https://dev.endpoint.com',
   },
   qa: {
-    baseUrl: 'https://google.com',
+    baseUrl: 'https://qastaging.siigo.com/#/login',
   },
   prod: {
     baseUrl: 'https://endpoint.com',

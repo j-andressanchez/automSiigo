@@ -1,0 +1,16 @@
+{
+  "clienteValido": {
+    "identificacion": "10101116",
+    "nombres": "Daniel",
+    "apellidos": "Reyes",
+    "email": "testsiigo@test.com",
+    "indicativo": "601",
+    "telefono": "3001234567",
+    "direccion": "cra 20 20 20",
+    "ciudad": "Bogotá",
+    "codPostal": "11001",
+    "regimen": "No responsable de IVA",
+    "respFiscal": "Autorretenedor",
+    "cargo": "Quality Engineer"
+  }
+}

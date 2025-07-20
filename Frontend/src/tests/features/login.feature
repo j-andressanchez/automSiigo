@@ -1,6 +1,8 @@
-Feature: Login Functionality As a user I want to log in to the application So that I can access my account
+Feature: Flujo de registro Cliente tercero en Siigo
 
 Scenario: Successful login 
-Given the user navigates to the login page 
-When the user logs in with username "ana@example.com" and password "Pass1234" 
-Then the page title should be "Welcome"
+Given el usuario navega a la pagina de Login
+When el usuario digita las credenciales correctas
+And el usuario ingresa a la opción de crear Cliente
+And el usuario diligencia el formulario
+Then debe aparecer un toast de registro exitoso

@@ -11,7 +11,7 @@ export default class OpenPage {
   }
 
   async performAs(actor) {
-    const browse = actor.abilityTo(BrowseTheWeb);
-    await browse.page.goto(this.url);
+    const page = actor.abilityTo(BrowseTheWeb).getPage();
+    await page.goto(this.url);
   }
 }

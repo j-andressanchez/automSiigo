@@ -11,6 +11,10 @@ export default class IsVisible {
 
   async answeredBy(actor) {
     const browse = actor.abilityTo(BrowseTheWeb);
-    return await browse.page.isVisible(this.selector);
+    const locator = browse.page.locator(this.selector);
+
+    await locator.waitFor({ state: 'visible', timeout: this.timeout });
+
+    return await locator.isVisible();
   }
 }

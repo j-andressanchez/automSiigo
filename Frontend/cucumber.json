@@ -4,9 +4,8 @@
     "import": ["src/tests/steps/**/*.js", "src/tests/support/**/*.js"],
     "format": [
       "progress",
-      "json:report/cucumber-report.json",
-      "allure-cucumberjs/reporter:report/allure-results"
+      "json:report/cucumber-report.json"
     ],
-    "publish": true
+    "timeout": 10000
   }
 }

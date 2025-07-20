@@ -1,3 +1,4 @@
+import { LoginPage } from '#screenplay/pages/LoginPage.js';
 import BrowseTheWeb from '../abilities/browseTheWeb.js';
 
 export default class Login {
@@ -10,12 +11,22 @@ export default class Login {
         return new Login(username, password);
     }
 
-    async performAs(actor) {
-        const browse = actor.abilityTo(BrowseTheWeb);
-        const page = browse.page;
+    static withEnvCredentials() {
+        const { APP_USER, APP_PASS } = process.env;
 
-        await page.fill('input[name="username"]', this.username);
-        await page.fill('input[name="password"]', this.password);
-        await page.click('button[type="submit"]');
+        if (!APP_USER || !APP_PASS) {
+        throw new Error('Las credenciales no están definidas en variables de entorno');
+        }
+
+        return new Login(APP_USER, APP_PASS);
+    }
+
+    async performAs(actor) {
+        const page = actor.abilityTo(BrowseTheWeb).page;
+
+        await LoginPage.usernameInput(page).fill(this.username)
+        await LoginPage.passwordInput(page).fill(this.password);
+        await LoginPage.loginButton(page).click();
+
     }
 }
