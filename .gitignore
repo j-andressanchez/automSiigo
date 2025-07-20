@@ -1,5 +1,9 @@
 Frontend/node_modules/
 Frontend/*.lock
 Frontend/report/
-Frontend/allure-results/
 Frontend/src/config/.env
+
+Backend/node_modules/
+Backend/*.lock
+Backend/target
+Backend/.idea
